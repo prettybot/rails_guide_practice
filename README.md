@@ -1,24 +1,7 @@
-# README
+All features in the guide document are verified by unit test.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+### rails guide
+https://ruby-china.github.io/rails-guides/
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+### how to run test case
+`m` or `bin/rake test`
