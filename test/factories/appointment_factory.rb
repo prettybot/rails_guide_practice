@@ -9,11 +9,10 @@
 #  created_at       :datetime         not null
 #  updated_at       :datetime         not null
 #
+require 'faker'
 
-require 'test_helper'
-
-class AppointmentTest < ActiveSupport::TestCase
-  # test "the truth" do
-  #   assert true
-  # end
+FactoryBot.define do
+  factory :appointment do
+    appointment_date {Faker::Date.forward(days: 14)}
+  end
 end

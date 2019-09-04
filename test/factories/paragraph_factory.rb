@@ -9,6 +9,11 @@
 #  updated_at :datetime         not null
 #
 
-class Paragraph < ApplicationRecord
-  belongs_to :section
+require 'faker'
+
+FactoryBot.define do
+  factory :paragraph do
+    content {Faker::Books::Lovecraft.paragraph}
+    section
+  end
 end

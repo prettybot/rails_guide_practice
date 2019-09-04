@@ -1,14 +1,17 @@
 # == Schema Information
 #
-# Table name: documents
+# Table name: patients
 #
 #  id         :bigint           not null, primary key
-#  title      :string(255)
+#  name       :string(255)
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
 #
+require 'faker'
 
-class Document < ApplicationRecord
-  has_many :sections
-  has_many :paragraphs, through: :sections
+FactoryBot.define do
+  factory :patient do
+    name { Faker::Name.name }
+  end
 end
+

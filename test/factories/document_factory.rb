@@ -7,8 +7,9 @@
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
 #
-
-class Document < ApplicationRecord
-  has_many :sections
-  has_many :paragraphs, through: :sections
+require 'faker'
+FactoryBot.define do
+  factory :document do
+    title { Faker::Book.title }
+  end
 end

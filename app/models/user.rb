@@ -1,14 +1,15 @@
 # == Schema Information
 #
-# Table name: documents
+# Table name: users
 #
 #  id         :bigint           not null, primary key
-#  title      :string(255)
+#  name       :string(255)
+#  phone      :string(255)
+#  email      :string(255)
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
 #
 
-class Document < ApplicationRecord
-  has_many :sections
-  has_many :paragraphs, through: :sections
+class User < ApplicationRecord
+  has_many :pictures, as: :imageable
 end

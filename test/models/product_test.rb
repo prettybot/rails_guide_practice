@@ -1,14 +1,17 @@
 # == Schema Information
 #
-# Table name: documents
+# Table name: products
 #
 #  id         :bigint           not null, primary key
-#  title      :string(255)
+#  name       :string(255)
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
 #
 
-class Document < ApplicationRecord
-  has_many :sections
-  has_many :paragraphs, through: :sections
+require 'test_helper'
+
+class ProductTest < ActiveSupport::TestCase
+  # test "the truth" do
+  #   assert true
+  # end
 end

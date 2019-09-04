@@ -1,9 +1,0 @@
-# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
-
-one:
-  title: "小节1"
-  document: one
-
-two:
-  title: "小节2"
-  document: one

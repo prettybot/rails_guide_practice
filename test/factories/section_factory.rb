@@ -9,7 +9,14 @@
 #  updated_at  :datetime         not null
 #
 
-class Section < ApplicationRecord
-  has_many :paragraphs
-  belongs_to :document
+require 'faker'
+
+FactoryBot.define do
+  factory :section do
+    sequence :title do |n|
+      "第#{n}小节"
+    end
+    document
+  end
 end
+
